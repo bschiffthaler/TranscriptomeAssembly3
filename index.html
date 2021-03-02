@@ -105,6 +105,143 @@
 						<h3>A Norway Spruce Example</h3>
 						<img class="stretch" data-src="img/spruce_ccs_coverage.png">
 					</section>
+					<section data-background="white">
+						<h3>Predicted Gene consistent with PacBio read</h3>
+						<img class="stretch" data-src="img/genomeview.png">
+					</section>
+					<section>
+						<h2><a href="https://www.pacb.com/wp-content/uploads/Application-Brief-RNA-sequencing-Best-Practices.pdf">Let's take a look</a></h2>
+					</section>
+					<section>
+						<h3>Remarks</h3>
+						<ul>
+							<li class="fragment">cDNA sequencing</li>
+							<li class="fragment">not amplification free</li>
+							<li class="fragment">300ng</li>
+							<li class="fragment">0.5-4M reads for a 10h movie</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-background="white">
+						<h3>Oxford Nanopore</h3>
+						<img class="stretch" data-src="img/npintro.png"></img>
+					</section>
+					<section data-background="white">
+						<h3>Product Range</h3>
+						<img  class="stretch" src="img/npcomp.png">
+					</section>
+					<section data-background="white">
+						<img  class="stretch" src="img/nptech.png">
+						<p><a style="font-size: 24px; href="https://f1000research.com/articles/4-1075/v1">https://f1000research.com/articles/4-1075/v1</a></p>
+					</section>
+					<section>
+						<h3>Let's Take A Look</h3>
+						<p><a href="https://nanoporetech.com/resource-centre/quantitative-rna-seq-pcr-cdna-pcr-free-direct-cdna-and-direct-rna-sequencing">Quantitative RNA-seq: PCR-cDNA, PCR-free Direct cDNA and Direct RNA sequencing</a></p>
+						<p><a href="https://nanoporetech.com/resource-centre/nanopores-allow-direct-sequencing-rna-strands-giving-full-length-reads-low-bias-1">Nanopores allow direct sequencing of RNA strands, giving full-length reads with low bias</a></p>
+					</section>
+					<section>
+						<h3>Remarks</h3>
+						<ul>
+							<li class="fragment">different protocols: PCR, PCR-free, Direct</li>
+							<li class="fragment">less bias than Illumina (GC and length)</li>
+							<li class="fragment">less throughput than PacBio</li>
+							<li class="fragment">More: <a href="https://www.nature.com/articles/s41598-018-29334-5">https://www.nature.com/articles/s41598-018-29334-5</a> </li>
+						</ul>
+					</section>
+					<section>
+						<img  class="stretch" data-src="img/krastronaut.png">
+						<p style="top: 0;">American astronaut Kate Rubins with a MinION sequencer on the ISS in August 2016.</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Wait! HMW?</h3>
+						<p class="r-fit-text">How do I get High Molecular Weight (HMW) DNA (or RNA for that matter)?</p>
+					</section>
+					<section data-background="white">
+						<h3>Pulse Field Gel Electrophoresis</h3>
+						<ul>
+							<li>Needed to size large fragments of DNA</li>
+							<li>Fragments larger than 15-20Kb migrate at the same speed on a standard gel</li>
+						</ul>
+						<img class="stretch" data-src="img/pfge.png">
+					</section>
+					<section data-background="white">
+						<h3>Pippin and BluePipping System</h3>
+						<ul>
+							<li class="fragment">PippinPrep: Short Read NGS Library Construction –inserts from 100bp to 1.5kb</li>
+							<li class="fragment">BluePippin–11+bp –50Kb+ using PFGE</li>
+						</ul>
+						<img class="stretch" data-src="img/pippin.png">
+					</section>
+					<section data-background="white">
+						<h3>More Alternatives are Coming</h3>
+						<img class="stretch" data-src="img/circulomics.png"></img>
+					</section>
+					<section data-background="white">
+						<img class="stretch" data-src="img/circ2.png">
+						<p><a style="font-size: 24px; href="https://docs.wixstatic.com/ugd/5518db_31e70e1679124a06b7e92121a1594898.pdf">https://docs.wixstatic.com/ugd/5518db_31e70e1679124a06b7e92121a1594898.pdf</a></p>
+					</section>
+					<section data-background="white">
+						<img class="stretch" data-src="img/circ3.png">
+						<p><a style="font-size: 24px; href="https://docs.wixstatic.com/ugd/5518db_31e70e1679124a06b7e92121a1594898.pdf">https://docs.wixstatic.com/ugd/5518db_31e70e1679124a06b7e92121a1594898.pdf</a></p>
+					</section>
+					<section data-background="white">
+						<h3>Is Longer DNA Always Better?</h3>
+						<ul>
+							<li style="font-size: 24px;">With ONT and PacBio only a small fractions of DNA molecules are sequenced</li>
+							<li style="font-size: 24px;">Short molecules contribute disproportionately to weight of quantified DNA</li>
+						</ul>
+						<img class="stretch" data-src="img/longerbetter.png">
+						<p><a style="font-size: 24px;" href="https://albertsenlab.org/why-is-it-important-to-remove-short-molecules/">https://albertsenlab.org/why-is-it-important-to-remove-short-molecules/</a></p>
+					</section>
+				</section>
+				<section>
+					<h3>Comparison to Illumina</h3>
+					<ul>
+						<li>Advantages</li>
+						<ul>
+							<li class="fragment">contiguity, biologically relevant transcripts, less bias</li>
+						</ul>
+						<li>Inconveniences</li>
+						<ul>
+							<li class="fragment">cost, low throughput, wet-lab</li>
+							<li class="fragment">(error rate) lowly expressed transcripts won't be corrected as well</li>
+						</ul>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h3>PacBio Data (pre-) processing</h3>
+					</section>
+					<section>
+						<h3>What is Available?</h3>
+						<p><a href="https://github.com/search?q=isoseq">https://github.com/search?q=isoseq</a></p>
+					</section>
+					<section>
+						<h3>What Will We Do Today?</h3>
+						<p><a href="https://github.com/PacificBiosciences/IsoSeq/blob/master/README.md">https://github.com/PacificBiosciences/IsoSeq/blob/master/README.md</a></p>
+					</section>
+					<section>
+						<h3>And Some More Details</h3>
+						<p><a href="https://github.com/PacificBiosciences/IsoSeq/blob/master/isoseq-clustering.md">https://github.com/PacificBiosciences/IsoSeq/blob/master/isoseq-clustering.md</a></p>
+						<p><a href="https://github.com/PacificBiosciences/IsoSeq/blob/master/isoseq-deduplication.md">https://github.com/PacificBiosciences/IsoSeq/blob/master/isoseq-deduplication.md</a></p>
+					</section>
+					<section>
+						<h3>What Does It Do Now?</h3>
+						<p><a href="https://github.com/PacificBiosciences/IsoSeq_SA3nUP">https://github.com/PacificBiosciences/IsoSeq_SA3nUP</a></p>
+						<p><a href="https://github.com/PacificBiosciences/IsoSeq_SA3nUP/wiki">https://github.com/PacificBiosciences/IsoSeq_SA3nUP/wiki</a></p>
+					</section>
+					<section>
+					<h3>Learning Objectives</h3>
+					<p>At the end of this lecture you will be able to:</p>
+					<ul>
+						<li class="fragment">Describe the extant 3rd generation technologies</li>
+						<li class="fragment">Appraise 3rd gen library preparation limitations</li>
+						<li class="fragment">Explain the PacBio IsoSeq preprocessing workflow</li>
+					</ul>
+				</section>
 				</section>
 			</div>
 		</div>
