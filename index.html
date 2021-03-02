@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Title</title>
+		<title>3rd Gen Transcriptomes</title>
 
 		<link rel="stylesheet" href="reveal.js/dist/reset.css">
 		<link rel="stylesheet" href="reveal.js/dist/reveal.css">
@@ -18,8 +18,93 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h1>Random Forests</h1>
-					<p>Bastian Schiffthaler</p>
+					<h1>Long read sequencing</h1>
+					<p>Nicolas Delhomme, Nathaniel Street, Bastian Schiffthaler</p>
+				</section>
+				<section>
+					<h3>Learning Objectives</h3>
+					<p>At the end of this lecture you will be able to:</p>
+					<ul>
+						<li class="fragment">Describe the extant 3rd generation technologies</li>
+						<li class="fragment">Appraise 3rd gen library preparation limitations</li>
+						<li class="fragment">Explain the PacBio IsoSeq preprocessing workflow</li>
+					</ul>
+				</section>
+				<section>
+					<h3> A historical perspective</h3>
+					<table>
+						<thead>
+							<tr>
+								<th>Founded</th><th>Name</th><th>Defunct</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="fragment"><td>2003</td><td>Helicos BioSciences</td><td>2012</td></tr>
+							<tr class="fragment"><td>2004</td><td>Pacific BioSciences</td><td></td></tr>
+							<tr class="fragment"><td>2005</td><td>454 Life Sciences*</td><td>2013</td></tr>
+							<tr class="fragment"><td>2005</td><td>Oxford Nanopore</td><td></td></tr>
+							<tr class="fragment"><td>2007</td><td>Solexa* (Illumina)</td><td></td></tr>
+							<tr class="fragment"><td>2018</td><td>PacBio* (Illumina)</td><td></td></tr>
+						</tbody>
+					</table>
+					<p class="small">* next-generation sequencing for illustration purposes</p>
+				</section>
+				<section>
+					<section>
+						<h3>Sequencing methods</h3>
+						<p>PacBio</p>
+						<ul>
+							<li>Single molecule real-time sequencing-by-synthesis</li>
+							<li>Observe a single polymerase as bases incorporated</li>
+							<li>Uses phospholinkednucleotides, each base emits characteristics signal</li>
+							<li>Kilobase length reads and read phasing (3 bp per second)</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Sequencing methods</h3>
+						<p>Nanopore</p>
+						<ul>
+							<li>Sequencing-by-cleavage</li>
+							<li>In a nanopore, cleave DNA base-by-base and record bases using characteristic electrical signal per nucleotoide</li>
+						</ul>
+					</section>
+					<section>
+						<h3>PacBio Sequel</h3>
+						<ul>
+							<li>1 million ZMW per SMRT cell</li>
+							<li>Average read length > 10kbp</li>
+							<li>Output of 7.6 Gb</li>
+							<li>Run time of 30m - 20h</li>
+							<li>Runs 1 - 16 cells at a time</li>
+						</ul>
+					</section>
+					<section data-background="white">
+						<h3>PacBio template preparation</h3>
+						<img class="stretch" data-src="https://d3i71xaburhd42.cloudfront.net/56ede017b1e75f89f096cdab5d40620011b7b406/3-Figure2-1.png">
+					</section>
+					<section>
+						<h3>The Zero Mode Waveguide (ZMW)</h3>
+						<iframe class="stretch" data-src="https://www.youtube.com/embed/NHCJ8PtYCFc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</section>
+					<section data-background="white">
+						<h3>PacBio sequencing</h3>
+						<img class="stretch" data-src="img/pbzmw.png">
+					</section>
+					<section data-background="white">
+						<h3>PacBio Read Structure</h3>
+						<img class="stretch" data-src="img/pb_read_structure.png">
+					</section>
+					<section data-background="white">
+						<h3>PacBio Consensus Accuracy</h3>
+						<div class="r-stack">
+							<img width=800 class="fragment" data-src="img/pbconsensus1.png">
+							<img width=800 class="fragment" data-src="img/pbconsensus2.png">
+						</div>
+					</section>
+					<section data-background="white">
+						<h3>A Norway Spruce Example</h3>
+						<img class="stretch" data-src="img/spruce_ccs_coverage.png">
+					</section>
 				</section>
 			</div>
 		</div>
@@ -35,8 +120,8 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-				width: 1600,
-				height: 1280,
+				width: 1280,
+				height: 720,
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
